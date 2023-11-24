@@ -1,0 +1,83 @@
+<!-- test order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigilatte Coffee House - order</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="test_script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Vigilatte Coffee House</h1>
+        <p>Your daily dose of caffeine!</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Menu</a></li>
+                    <li><a href="menu.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="test order.html">Order</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <div id="order-form">
+        <h2>Place Your Order</h2>
+        <form id="coffee-order-form">
+            <label for="coffee-type">Coffee Type:</label>
+            <select id="coffee-type" name="coffee-type">
+                <option value="cafe latte">Cafe Latte</option>
+                <option value="cafe Mocha">Cafe Mocha</option>
+                <option value="americano">Americano</option>
+                <option value="caramel macchiato">Caramel Macchiato</option>
+                <option value="vietnamese spanish latte">Vietnamese Spanish Latte</option>
+            </select>
+    
+            <label for="coffee-size">Size:</label>
+            <select id="coffee-size" name="coffee-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+    
+            <label for="additional-options">Additional Options:</label>
+            <input type="text" id="additional-options" name="additional-options" placeholder="e.g., extra shot, flavored syrup">
+    
+            <button type="button" onclick="calculateOrder()">Place Order</button>
+        </form>
+    
+        <div id="order-summary">
+            <h3>Order Summary</h3>
+            <p><strong>Coffee Type:</strong> <span id="summary-coffee-type"></span></p>
+            <p><strong>Size:</strong> <span id="summary-coffee-size"></span></p>
+            <p><strong>Additional Options:</strong> <span id="summary-additional-options"></span></p>
+            <p><strong>Total Cost:</strong> RM <span id="summary-total-cost"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        function calculateOrder() 
+    {
+            // Get selected values from the form
+            var coffeeType = document.getElementById('coffee-type').value;
+            var coffeeSize = document.getElementById('coffee-size').value;
+            var additionalOptions = document.getElementById('additional-options').value;
+    
+            // Calculate total cost (you can adjust the pricing logic)
+            var baseCost = 3.50; // Base cost for a coffee
+            var additionalOptionsCost = 1.50; // Additional cost for each extra option
+    
+            var totalCost = baseCost + additionalOptions.split(',').length * additionalOptionsCost;
+    
+            // Display order summary
+            document.getElementById('summary-coffee-type').innerText = coffeeType;
+            document.getElementById('summary-coffee-size').innerText = coffeeSize;
+            document.getElementById('summary-additional-options').innerText = additionalOptions || 'None';
+            document.getElementById('summary-total-cost').innerText = totalCost.toFixed(2);
+    
+    </script>
+</body>
+</html>

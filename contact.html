@@ -1,0 +1,132 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigilatte Coffee House - Contact</title>
+    <link rel="stylesheet" href="menu_style.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Vigilatte Coffee House</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Menu</a></li>
+                <li><a href="menu.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="test order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 4px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email..">
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <main>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>
+                <strong>Email:</strong> <a href="mailto:info@vigilattecoffeehouse.com">info@vigilattecoffeehouse.com</a>
+            </p>
+            <p>
+                <strong>Phone:</strong> <a href="tel:+60 12-816 1340">+60 12-816 1340</a>
+            </p>
+            <p>
+                <strong>Address:</strong> Vigilatte Coffee House<br>
+                No 13 (Ground Floor, Persiaran Pendang Square 1<br>
+                Pendang Square, 06700 Pendang, Kedah<br>
+            </p>
+        
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var formData = new FormData(event.target);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'submit.php', true);
+            xhr.onload = function() {
+                if (this.status === 200) {
+                    alert('Form submitted successfully');
+                    event.target.reset();
+                } else {
+                    alert('Failed to submit the form');
+                }
+            };
+            xhr.send(formData);
+        });
+
+    </script>
+</body>
+</html>
+
+    <footer>
+        <p>&copy; 2023 Vigilatte Coffee House</p>
+    </footer>
+
+</body>
+</html>
+
+

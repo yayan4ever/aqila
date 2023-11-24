@@ -1,0 +1,89 @@
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Vigilatte Coffee House</title>
+    <link rel="stylesheet" href="menu_style.css">
+
+</head>
+<body>
+        <header>
+            <h1>Vigilatte Coffee House</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Menu</a></li>
+                    <li><a href="menu.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="test order.html">Order</a></li>
+                </ul>
+            </nav>
+        </header>
+    <body>
+        <div class="menu-container">
+            <div class="menu-item" id="item1">
+                <img src="Cafe latte.png" alt="cafe latte order now">
+                <h2>Cafe Latte</h2>
+                <p>This mixture of chocolate & coffee has won the hearts of many.
+                    For rich dessert lovers. Crafted with 100% Australian Chocolate (40% Cocoa).</p>
+                <p>Price: RM 9.50</p>
+                <button onclick="addToOrder('item1')">Add to Order</button>
+            </div>
+            
+            <div class="menu-item" id="item2">
+                <img src="Cafe mocha.png" alt="cafe mocha order now">
+                <h2>Cafe Latte</h2>
+                <p>This mixture of chocolate & coffee has won the hearts of many.
+                    For rich dessert lovers. Crafted with 100% Australian Chocolate (40% Cocoa).</p>
+                <p>Price: RM 9.50</p>
+                <button onclick="addToOrder('item2')">Add to Order</button>
+            </div>
+
+            <div class="menu-item" id="item3">
+                <img src="Americano.png" alt="americano order now">
+                <h2>Americano</h2>
+                <p>A shot of Espresso with a deep-tan crema that’s smooth and robust and perfectly preserved for your enjoyment.</p>
+                <p>Price: RM 6.90</p>
+                <button onclick="addToOrder('item3')">Add to Order</button>
+            </div>
+
+            <div class="menu-item" id="item4">
+                <img src="Caramel macchiato.png" alt="caramel macchiato order now">
+                <h2>Caramel Macchiato</h2>
+                <p> A deconstructed Caramel Latte, where the Espresso is not mixed with the milk but poured on top of the frothed milk.
+                    For creamy dessert lovers. Crafted with 100% Authentic French Syrup.</p>
+                <p>Price: RM 11.70</p>
+                <button onclick="addToOrder('item4')">Add to Order</button>
+            </div>
+
+            <div class="menu-item" id="item5">
+                <img src="Vietnamese spanish latte.png" alt="vietnamese spanish latte order now">
+                <h2>Vietnamese Spanish Latte</h2>
+                <p>We’re getting coco-loco with our Spanish Latté.
+                    This bestseller has gotten a makeover with creamy coconut and rich Vietnamese coffee! </p>
+                <p>Price: RM 10.90</p>
+                <button onclick="addToOrder('item5')">Add to Order</button>
+            </div>
+    </div>
+        <script>
+            var totalCost = 0; // Variable to store the total cost
+
+function addToOrder(item) {
+    // Find the menu item with the selected name
+    var menuItem = document.querySelector('.menu-item span:contains("' + item + '")');
+
+    // Get the price from the data-price attribute
+    var price = parseFloat(menuItem.parentElement.getAttribute('data-price'));
+
+    // Update the total cost
+    totalCost += price;
+
+    // Display the updated total cost
+    document.getElementById('summary-total-cost').innerText = totalCost.toFixed(2);
+}
+</script>
+
+</body>
+</html>

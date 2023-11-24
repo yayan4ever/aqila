@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url('brown.png') ;
+    background-size: cover;
+  }
+  
+  
+  
+  header {
+              background-color: rgba(88, 56, 5, 0.973);
+              color: #fff;
+              padding: 10px;
+              text-align: center;
+          }
+  
+          nav ul {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+          }
+  
+          nav ul li {
+              display: inline;
+              margin-right: 20px;
+          }
+  
+          a {
+              text-decoration: none;
+              color: #ffffff;
+          }
+  
+          .main-content {
+              padding: 20px;
+              color: #ffffff; /* Adjust text color as needed */
+          }
+  
+          footer {
+              background-color: rgba(82, 50, 2, 0.922); /* Adjust background color and transparency */
+              color: #fff;
+              text-align: center;
+              padding: 10px;
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+          }
+  
+         body {
+              font-family: Arial, sans-serif;
+          }
+  
+          .menu-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+          }
+  
+          .menu-item {
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              padding: 15px;
+              margin: 15px;
+              width: 300px;
+          }
+  
+          .menu-item img {
+              width: 100%;
+              height: auto;
+          }
+
+          .about{
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+  
+          button {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+          }
+  
+          #add-to-cart-btn {
+              background-color: #4CAF50;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+  
+          #order-summary {
+              margin-top: 20px;
+          }
+  
+          #order-summary button {
+              background-color: #4CAF50;
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+          }
+  
+          #contact {
+            background-image: url('brown.png'); 
+            background-size: cover;
+            color: #fff;
+        }
+        
+        .contact-info {
+            background: rgba(45, 45, 45, 0.7);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+        }
+        
+        .contact-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        
+        .contact-form label,
+        .contact-form textarea,
+        .contact-form input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+        }
+        
+        .contact-form button {
+            background-color: #ffd700; /* Gold color for the button */
+            color: #535353;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contact.container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        
+        .contact-h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .contact-p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .contact-a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .contact-a:hover {
+            text-decoration: underline;
+        }
+    
